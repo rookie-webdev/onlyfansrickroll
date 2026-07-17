@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="J B ☁ — exclusive creator content. A parody fan page made for entertainment." />
+  <title>J B ☁ — Exclusive Content</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Top Navigation ===== -->
+  <header class="nav" id="top">
+    <!-- Parody wordmark (original lock badge in OnlyFans blue, not the trademarked logo) -->
+    <a href="#top" class="brand" aria-label="Home">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">OnlyFans</span>
+      <span class="brand__parody">PARODY</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#profile">Home</a>
+      <a href="#feed">Photos</a>
+      <a href="#feed">Videos</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" aria-label="Search">🔍</button>
+      <button class="icon-btn" aria-label="Notifications">🔔</button>
+      <a href="#login" class="nav__login">Log in</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Profile / Cover ===== -->
+    <section class="profile" id="profile">
+      <!-- Cover banner -->
+      <div class="cover" aria-hidden="true" role="img" aria-label="Profile banner"></div>
+
+      <!-- Profile header -->
+      <div class="profile__head">
+        <!-- Avatar: drop your file in as pfp.jpg (or tell me the real filename) -->
+        <div class="avatar">
+          <img src="pfp.jpg" alt="J B ☁ profile picture" class="avatar__img" />
+          <span class="avatar__ring" aria-hidden="true"></span>
+        </div>
+
+        <div class="profile__meta">
+          <h1 class="profile__name">
+            J B ☁
+            <span class="verified" title="Verified creator">✔</span>
+          </h1>
+          <p class="profile__handle">@__rookie.x</p>
+
+          <p class="profile__bio">
+            cant bee tha ez bae. sexy sassy glamorous on heredodo 🤍
+          </p>
+
+          <div class="profile__stats">
+            <span><strong>128K</strong> fans</span>
+            <span><strong>2.4M</strong> likes</span>
+            <span><strong>1.2K</strong> posts</span>
+            <span class="profile__online"><i></i> Online</span>
+          </div>
+
+          <div class="profile__location">
+            🌎 serving looks & devastation · Joined 1945
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="profile__actions">
+          <button class="btn btn--primary btn--lg" data-subscribe>
+            Subscribe · $4.99/mo
+          </button>
+          <button class="btn btn--ghost btn--icon" data-subscribe aria-label="Like">♥</button>
+          <button class="btn btn--ghost btn--icon" data-subscribe aria-label="Tip">💸</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Quick info bar ===== -->
+    <section class="infobar reveal">
+      <div class="infobar__inner">
+        <div class="infobar__item">
+          <span class="infobar__label">Subscription</span>
+          <span class="infobar__value">$4.99<span class="infobar__dim">/month</span></span>
+        </div>
+        <div class="infobar__divider" aria-hidden="true"></div>
+        <div class="infobar__item">
+          <span class="infobar__label">Bundle</span>
+          <span class="infobar__value">Save up to 40%</span>
+        </div>
+        <div class="infobar__divider" aria-hidden="true"></div>
+        <div class="infobar__item">
+          <span class="infobar__label">Free trial</span>
+          <span class="infobar__value infobar__value--accent">7 days free</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Content tabs ===== -->
+    <section class="section reveal" id="feed">
+      <div class="feed__head">
+        <h2 class="section__title section__title--left">Exclusive Posts</h2>
+        <div class="feed__tabs" role="tablist" aria-label="Filter posts">
+          <button class="tab is-active">All</button>
+          <button class="tab">Photos</button>
+          <button class="tab">Videos</button>
+        </div>
+      </div>
+
+      <!-- Locked content grid -->
+      <div class="feed">
+        <!--
+          Locked posts: blurred "media" with an overlay.
+          Clicking anywhere on a post opens the subscription modal.
+        -->
+        <article class="post" data-subscribe>
+          <div class="post__media media--a" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__price">$9.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"u said u wanted a surprise… here it is 🤫"</span>
+            <span class="post__meta">12 photos · $9.99</span>
+          </div>
+        </article>
+
+        <article class="post" data-subscribe>
+          <div class="post__media media--b" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__play-badge">▶ 6:12</span>
+            <span class="post__price">$14.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"the video u keep asking for… 😈"</span>
+            <span class="post__meta">4K video · 6:12 · $14.99</span>
+          </div>
+        </article>
+
+        <article class="post" data-subscribe>
+          <div class="post__media media--c" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__price">$7.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"late night, no rules, just vibes 🌙"</span>
+            <span class="post__meta">8 photos · $7.99</span>
+          </div>
+        </article>
+
+        <article class="post" data-subscribe>
+          <div class="post__media media--d" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__play-badge">▶ 8:44</span>
+            <span class="post__price">$11.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"rated too hot for the timeline 🥵"</span>
+            <span class="post__meta">HD video · 8:44 · $11.99</span>
+          </div>
+        </article>
+
+        <article class="post" data-subscribe>
+          <div class="post__media media--e" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__price">$9.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"mirror pics, me, bored… you're welcome 🪞"</span>
+            <span class="post__meta">15 photos · $9.99</span>
+          </div>
+        </article>
+
+        <article class="post" data-subscribe>
+          <div class="post__media media--f" aria-hidden="true"></div>
+          <div class="post__overlay">
+            <span class="post__lock">🔒</span>
+            <span class="post__unlock">Subscribe to unlock</span>
+            <span class="post__price">$12.99</span>
+          </div>
+          <div class="post__foot">
+            <span class="post__title">"weekend dump… this one's my fav 🤍"</span>
+            <span class="post__meta">20 photos · $12.99</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pinned teaser -->
+      <div class="teaser reveal">
+        <p>👆 1,200+ more exclusive posts waiting for you.</p>
+        <button class="btn btn--primary" data-subscribe>Unlock all for $4.99</button>
+      </div>
+    </section>
+
+    <!-- ===== Pricing bundles ===== -->
+    <section class="section section--tint reveal" id="pricing">
+      <header class="section__head">
+        <h2 class="section__title">Choose your bundle</h2>
+        <p class="section__sub">Cancel anytime. (You can't actually cancel. Parody.)</p>
+      </header>
+
+      <div class="cards pricing">
+        <article class="card plan" data-subscribe>
+          <h3 class="plan__name">Broke</h3>
+          <div class="plan__price"><span class="plan__currency">$</span>4.99<span class="plan__period">/mo</span></div>
+          <ul class="plan__list">
+            <li>Full access to all posts</li>
+            <li>Direct messages (read-only)</li>
+            <li>One (1) feeling of regret</li>
+          </ul>
+          <button class="btn btn--primary btn--block">Subscribe</button>
+        </article>
+
+        <article class="card plan plan--featured" data-subscribe>
+          <span class="plan__tag">Most Questionable</span>
+          <h3 class="plan__name">Chud</h3>
+          <div class="plan__price"><span class="plan__currency">$</span>25.99<span class="plan__period">/6mo</span></div>
+          <ul class="plan__list">
+            <li>Everything in Broke</li>
+            <li>Save 13% on bad decisions</li>
+            <li>Priority being ignored</li>
+          </ul>
+          <button class="btn btn--primary btn--block">Subscribe</button>
+        </article>
+
+        <article class="card plan" data-subscribe>
+          <h3 class="plan__name">Disappointment</h3>
+          <div class="plan__price"><span class="plan__currency">$</span>47.99<span class="plan__period">/yr</span></div>
+          <ul class="plan__list">
+            <li>Everything in Chud</li>
+            <li>Save 40% on self-respect</li>
+            <li>Lifetime disappointment included</li>
+          </ul>
+          <button class="btn btn--primary btn--block">Subscribe</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Wishlist / About ===== -->
+    <section class="section reveal">
+      <header class="section__head">
+        <h2 class="section__title">About J B ☁</h2>
+      </header>
+      <div class="about card">
+        <p>
+          ur fav J B ☁ doing it better than the pros 💅 cant bee tha ez bae —
+          sexy, sassy, glamorous, and a little unhinged about it. if i'm too much,
+          that's a you problem, not a me problem 🤍
+        </p>
+        <div class="about__links">
+          <span>📸 @__rookie.x</span>
+          <span>🐦 @__rookie.x</span>
+          <span>🎵 my vibes, my rules</span>
+        </div>
+        <p class="about__fineprint">
+          This is a parody fan page made for entertainment only — not the real
+          OnlyFans, not a real creator account, and no real payment is ever taken.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="brand brand--footer">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>OnlyFans</span>
+      </div>
+      <p class="footer__disclaimer">
+        This website is a parody made for entertainment purposes only. It is not
+        affiliated with, endorsed by, or connected to the real OnlyFans or any
+        real person. No real payment is ever taken.
+      </p>
+      <p class="footer__copy">© <span data-year></span> J B ☁ (Parody). Definitely not real.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Payment Modal (full-screen) ===== -->
+  <div
+    class="modal"
+    id="payment-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-hidden="true"
+  >
+    <div class="modal__panel">
+      <!-- Processing state -->
+      <div class="modal__body" data-stage="processing">
+        <div class="modal__spinner" aria-hidden="true"></div>
+        <h2 class="modal__title" id="modal-title">Processing Payment...</h2>
+        <p class="modal__status" data-status>Checking account...</p>
+
+        <div class="progress">
+          <div class="progress__bar" data-progress></div>
+        </div>
+        <p class="modal__percent" data-percent>0%</p>
+
+        <p class="modal__fineprint">Secured by absolutely nobody. No real payment is taken.</p>
+      </div>
+
+      <!-- Success state -->
+      <div class="modal__body modal__body--success" data-stage="success" hidden>
+        <div class="modal__check" aria-hidden="true">✅</div>
+        <h2 class="modal__title">Payment Successful</h2>
+        <p class="modal__status">Redirecting to your exclusive content...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Sticky mobile subscribe bar (phones only) ===== -->
+  <div class="mobilebar" aria-hidden="true">
+    <div class="mobilebar__info">
+      <span class="mobilebar__price">$4.99<span>/mo</span></span>
+      <span class="mobilebar__trial">7-day free trial</span>
+    </div>
+    <button class="btn btn--primary btn--block" data-subscribe>Subscribe</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
