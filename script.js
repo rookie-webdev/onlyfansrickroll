@@ -13,7 +13,7 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* -------------------------------------------------------
-     2. Scroll reveal (fade sections in as they enter view)
+     2. Scroll reveal 
   ------------------------------------------------------- */
   const revealEls = document.querySelectorAll(".reveal");
 
@@ -35,25 +35,23 @@
   }
 
   /* -------------------------------------------------------
-     3. Feed tab switching (visual only — cosmetic filter)
+     3. Feed tab switching 
   ------------------------------------------------------- */
   const tabs = document.querySelectorAll(".tab");
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       tabs.forEach((t) => t.classList.remove("is-active"));
       tab.classList.add("is-active");
-      // Posts themselves stay as-is (every post is locked anyway).
+      // Posts themselves stay as-is .
     });
   });
 
   /* -------------------------------------------------------
      4. Payment modal + prank sequence
-     Any element with [data-subscribe] opens the modal:
-     Subscribe, Like, Tip, Unlock, posts, bundles, etc.
   ------------------------------------------------------- */
   const RICKROLL_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-  // Status messages shown in order, one per second.
+ 
   const MESSAGES = [
     "Checking account...",
     "Verifying payment...",
@@ -91,14 +89,14 @@
     runSequence();
   }
 
-  // Smoothly set the progress bar + numeric label
+  // progress bar + numeric label
   function setProgress(pct) {
     const value = Math.max(0, Math.min(100, pct));
     progressEl.style.width = value + "%";
     percentEl.textContent = Math.round(value) + "%";
   }
 
-  // Update the status line with a gentle fade
+  // status line gentle fade
   function setStatus(text) {
     statusEl.style.opacity = "0";
     setTimeout(() => {
@@ -107,7 +105,7 @@
     }, 140);
   }
 
-  // The believable sequence -> 99% -> pause -> 100% -> success -> redirect
+  // The sequence 
   function runSequence() {
     let step = 0;
     const total = MESSAGES.length; // 9
@@ -117,7 +115,7 @@
 
       if (step < total) {
         setStatus(MESSAGES[step]);
-        // Map step (1..total-1) onto a 0..99 scale so we land exactly on 99%.
+        // Map step 
         const pct = Math.round((step / (total - 1)) * 99);
         setProgress(pct);
       } else if (step === total) {
@@ -126,7 +124,7 @@
         setProgress(99);
         clearInterval(intervalId);
 
-        // Hold at 99% for dramatic effect, then complete.
+        // dramatic effect
         setTimeout(() => {
           setProgress(100);
           showSuccess();
@@ -139,7 +137,7 @@
     processingStage.hidden = true;
     successStage.hidden = false;
 
-    // After a beat, "redirect to your exclusive content" (the rickroll).
+    // (the rickroll).
     setTimeout(() => {
       window.location.href = RICKROLL_URL;
     }, 1500);
